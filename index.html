@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="the icon.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>نظام صفّي - نظام تعليمي</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <nav class="m-5 flex justify-between items-center p-4 pl-6 bg-gradient-to-r from-sky-100 via-sky-200 to-white shadow-[0_10px_20px_rgba(0,0,0,0.15)] border-b-5 border-emerald-600 rounded-lg h-20">
+      <div id="titlee" class="flex items-center gap-3 font-extrabold text-2xl">
+        <i class="fas fa-graduation-cap text-3xl"></i>
+        نظام صفّي
+      </div>
+
+      <button id="menuBtn" class="text-2xl block sm:hidden text-cyan-700">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="hidden sm:flex flex-row gap-14 text-cyan-700 pr-5">
+        <li>
+          <a href="https://docs.google.com/spreadsheets/d/1jwm1iy9qLkVHXIm27iE3oVsN3B4jaV-dROB7-XsQ6aY/edit?hl=ar&gid=0#gid=0"
+            class="font-extrabold text-xl hover:p-3 hover:bg-cyan-700 transition-all duration-500 ease-out hover:rounded-2xl hover:text-gray-50">
+            ملف الطلاب
+            </a>
+        </li>
+        <li>
+          <a href="https://docs.google.com/spreadsheets/d/1G7FeARargBoBMDSTrdPnTHoWLsdmVEwGrlutRLcyPdo/edit?hl=ar&gid=0#gid=0"
+            class="font-extrabold text-xl hover:p-3 hover:bg-cyan-700 transition-all duration-500 ease-out hover:rounded-2xl hover:text-gray-50">
+            ملف الغياب
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-cyan-600 text-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 lg:hidden">
+      <div class="p-4 flex justify-between items-center border-b">
+        <h2 class="text-lg font-bold">القائمة</h2>
+        <button id="closeBtn" class="text-2xl">&times;</button>
+      </div>
+      <ul class="p-4 space-y-4 text-white">
+        <li>
+          <a href="https://docs.google.com/spreadsheets/d/1jwm1iy9qLkVHXIm27iE3oVsN3B4jaV-dROB7-XsQ6aY/edit?gid=0#gid=0" class="block text-white">
+           📂 ملف الطلاب
+          </a>
+        </li>
+        <li>
+          <a href="https://docs.google.com/spreadsheets/d/1G7FeARargBoBMDSTrdPnTHoWLsdmVEwGrlutRLcyPdo/edit?gid=0#gid=0" class="block text-white">
+            📝 ملف الغياب
+          </a>
+        </li>
+      </ul>
+    </div>
+
+<div id="contienur" 
+  class="w-11/12 h-[390px]        
+         sm:w-4/5 sm:h-auto       
+         md:w-3/5 md:h-auto       
+         lg:w-full lg:max-w-md lg:max-h-[500px] 
+         mb-6
+         border-4 border-r-teal-500 border-l-teal-400 border-b-teal-400 border-t-teal-500 
+         rounded-3xl p-6 sm:p-10 mx-auto mt-10 
+         flex flex-col items-center gap-6 
+         shadow-[0_10px_20px_rgba(0,114,254,0.5)] 
+         bg-gradient-to-r from-sky-100 via-sky-200 to-white">
+      
+         <h1 id="title" class="text-3xl sm:text-4xl font-extrabold text-cyan-700 text-center pb-3" data-text="مرحباً بك في نظام صفّي"></h1>
+      <p class="text-base sm:text-lg text-gray-600 text-center">
+        نظام متكامل لإدارة الطلاب، الحضور والغياب، والتقارير التعليمية بطريقة
+        سهلة ومتقدمة
+      </p>
+      <div id="login" class="pb-10">
+        <a href="log.html">
+          <button
+            type="submit"
+            class="bg-cyan-600 text-white flex px-6 sm:px-8 py-2 sm:py-3 mt-6 rounded-lg shadow-md hover:bg-cyan-700 transition-all duration-300 cursor-pointer text-base sm:text-lg font-bold">
+            تسجيل الطالب
+          </button>
+        </a>
+        <a href="attend.html">
+          <button
+            type="submit"
+            class="bg-cyan-600 text-white flex px-6 sm:px-8 py-2 sm:py-3 mt-6 rounded-lg shadow-md hover:bg-cyan-700 transition-all duration-300 cursor-pointer text-base sm:text-lg font-bold">
+            تسجيل الحضور
+          </button>
+        </a>
+         <a href="details.html">
+          <button
+            type="submit"
+            class="bg-cyan-600 text-white flex px-6 sm:px-8 py-2 sm:py-3 mt-6 rounded-lg shadow-md hover:bg-cyan-700 transition-all duration-300 cursor-pointer text-base sm:text-lg font-bold">
+           البحث / التعديل
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <footer class="mt-auto w-full bg-cyan-50 py-6 shadow-2xl">
+      <div class="max-w-6xl mx-auto text-center text-cyan-700 font-semibold">
+        &copy; 2025 نظام صفّي - جميع الحقوق محفوظة
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

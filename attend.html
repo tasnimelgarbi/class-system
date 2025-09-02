@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="the icon.jpg">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>تسجيل الحضور</title>
+</head>
+<body lang="ar" dir="rtl" class="flex flex-col items-center justify-center min-h-screen font-[Tajawal] bg-gray-50">
+
+  <!-- العنوان -->
+  <h1  id="title" data-text="تسجيل حالة الطالب" class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-cyan-700 text-center mt-6"></h1>
+
+  <!-- الكونتينر -->
+  <div class="w-11/12 sm:w-4/5 md:w-full max-w-md max-h-[500px] border-4 border-r-teal-500 border-l-teal-400 border-b-teal-400 border-t-teal-500 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 mx-auto mt-6 sm:mt-10 flex flex-col items-center gap-4 sm:gap-6 shadow-[0_10px_20px_rgba(0,114,254,0.5)] bg-gradient-to-r from-sky-100 via-sky-200 to-white">
+
+    <form id="attendanceForm" class="w-full">
+      
+      <!-- اسم الطالب -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-base sm:text-lg font-bold mb-2" for="studentName">
+          اسم الطالب:
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-blue-800 focus:outline-1 focus:shadow-[0_0_10px_rgba(0,123,255,0.5)] transition-all duration-300 font-bold" id="studentName" type="text" placeholder="اسم الطالب">
+      </div>
+      
+      <!-- التاريخ -->
+      <div class="mb-4 sm:mb-6">
+        <label class="block text-gray-700 text-base sm:text-lg font-bold mb-2" for="date">
+          التاريخ:
+        </label>
+        <input  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 font-bold leading-tight bg-white focus:outline-blue-800 focus:outline-1 focus:shadow-[0_0_10px_rgba(0,123,255,0.5)] transition-all duration-300" id="date" type="date">
+      </div>
+      
+      <!-- الحالة -->
+      <div class="mb-4 sm:mb-6">
+        <label class="block text-gray-700 text-base sm:text-lg font-bold mb-2" for="status">
+          حالة الطالب:
+        </label>
+        <select class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="status">
+          <option value="">-- اختر الحالة --</option>
+          <option value="حاضر">حاضر</option>
+          <option value="غائب">غائب</option>
+        </select>
+      </div>
+      
+      <!-- الصف -->
+      <div class="mb-4 sm:mb-6">
+        <label class="block text-gray-700 text-base sm:text-lg font-bold mb-2" for="year">الصف الدراسي:</label>
+        <select id="year" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <option value="">-- اختر الصف الدراسي --</option>
+          <option value="الثاني">الصف الثاني</option>
+          <option value="الثالث">الصف الثالث</option>
+          <option value="الرابع">الصف الرابع</option>
+          <option value="الخامس">الصف الخامس</option>
+          <option value="السادس">الصف السادس</option>
+        </select>
+      </div>
+
+      <!-- الزرار -->
+<div class="flex justify-center w-full">
+        <button id="submitBtn" type="submit" class="cursor-pointer bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 sm:px-6 rounded focus:outline-none focus:shadow-outline flex items-center justify-center gap-2 text-sm sm:text-base">
+          <span id="btnText">تسجيل الحضور</span>
+          <span id="loadingSpinner" class="hidden animate-spin">⏳</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="attend.js"></script>
+</body>
+</html>

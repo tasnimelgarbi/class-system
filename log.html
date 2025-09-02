@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="the icon.jpg">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>التسجيل</title>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen font-[Tajawal] bg-gray-50">
+
+  <h1 id="title" data-text="مرحباً بك في صفحة التسجيل" class="text-2xl sm:text-3xl md:text-4xl text-cyan-700 text-center font-extrabold mt-5 mb-6"></h1>
+
+  <form id="registrationForm" class="w-11/12 sm:w-4/5 md:w-full max-w-md flex flex-col gap-3 sm:gap-4 items-center bg-gradient-to-r
+                    from-sky-100 via-sky-200 to-white shadow-xl
+                    p-4 sm:p-6 md:p-8 border-2 border-emerald-600 rounded-2xl sm:rounded-3xl">
+
+    <div class="w-full text-cyan-700">
+      <label for="name" class="mb-1 font-semibold text-base sm:text-lg">الاسم:</label>
+      <input id="name" type="text" placeholder="ادخل اسم الطالب:" class="border px-3 py-2 w-full rounded">
+    </div>
+
+    <div class="w-full flex flex-col text-cyan-700">
+      <label for="year" class="mb-1 font-semibold text-base sm:text-lg">الصف الدراسي:</label>
+      <select id="year" class="border rounded px-3 py-2 w-full">
+        <option value="">-- اختر الصف الدراسي --</option>
+        <option value="الثاني">الصف الثاني</option>
+        <option value="الثالث">الصف الثالث</option>
+        <option value="الرابع">الصف الرابع</option>
+        <option value="الخامس">الصف الخامس</option>
+        <option value="السادس">الصف السادس</option>
+      </select>
+    </div>
+
+    <div class="w-full flex flex-col text-cyan-700">
+      <label for="phone" class="mb-1 font-semibold text-base sm:text-lg">رقم الهاتف:</label>
+      <input id="phone" type="number" placeholder="ادخل رقم الهاتف:" class="border rounded px-3 py-2 w-full">
+    </div>
+
+    <div class="w-full flex flex-col text-cyan-700">
+      <label class="mb-2 font-semibold text-base sm:text-lg">الدفع:</label>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm sm:text-base">
+        <label class="flex items-center gap-2"><input type="checkbox" name="pay-month" value="سبتمبر"> سبتمبر</label>
+        <label class="flex items-center gap-2"><input type="checkbox" name="pay-month" value="أكتوبر"> أكتوبر</label>
+        <label class="flex items-center gap-2"><input type="checkbox" name="pay-month" value="نوفمبر"> نوفمبر</label>
+        <label class="flex items-center gap-2"><input type="checkbox" name="pay-month" value="ديسمبر"> ديسمبر</label>
+        <label class="flex items-center gap-2"><input type="checkbox" name="pay-month" value="يناير"> يناير</label>
+        <label class="flex items-center gap-2"><input type="checkbox" name="pay-month" value="فبراير"> فبراير</label>
+        <label class="flex items-center gap-2"><input type="checkbox" name="pay-month" value="مارس"> مارس</label>
+        <label class="flex items-center gap-2"><input type="checkbox" name="pay-month" value="أبريل"> أبريل</label>
+        <label class="flex items-center gap-2"><input type="checkbox" name="pay-month" value="مايو"> مايو</label>
+      </div>
+    </div>
+
+    <button id="submitBtn" type="submit" class="cursor-pointer bg-cyan-700 text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-cyan-800 transition flex items-center gap-2 text-sm sm:text-base">
+      <span id="btnText">تسجيل الطالب</span>
+      <span id="loadingSpinner" class="hidden animate-spin">⏳</span>
+    </button>
+
+  </form>
+
+  <script src="log.js"></script>
+</body>
+</html>
