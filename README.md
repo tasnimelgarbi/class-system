@@ -21,12 +21,6 @@ The project is designed to practice building a functional system for student reg
 
 ---
 
-## How to Run
-Clone the repository and open `index.html` in your browser:  
-```bash
-git clone https://github.com/mohammed-gamal-abdelmeged/class-system.git
-cd class-system
-
 ## Author
 - [Tasnim Elgarbi](https://github.com/tasnimelgarbi)  
 - [Mohammed Gamal](https://github.com/mohammed-gamal-abdelmeged)
